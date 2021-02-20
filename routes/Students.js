@@ -2,9 +2,12 @@ const router = require('express').Router();
 let Student = require('../models/Students.models')
 
 router.route('/').get((req, res) => {
+  res.status(200).send("hello world");
+  /*
   Student.find()
     .then(student => res.json(student))
     .catch(err => res.status(400).send(err))
+  */
 })
 
 router.route('/create').post((req, res) => {
