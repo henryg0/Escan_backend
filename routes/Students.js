@@ -25,7 +25,7 @@ router.route('/create').post((req, res) => {
 
   newStudent.save()
     .then( () => res.status(200).send("student added!"))
-    .catch( (e) => res.status(400).send(e));
+    .catch( (e) => res.status(400).json(e));
   
 })
 
