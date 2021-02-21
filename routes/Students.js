@@ -11,12 +11,8 @@ router.route('/create').post((req, res) => {
   query = {
     name : req.body.name,
     address : req.body.address,
-    city : req.body.city,
-    state : req.body.state,
     email : req.body.email,
-    enteredRaffle : req.body.enteredRaffle,
     major : req.body.major,
-    phoneNumber : req.body.phoneNumber,
     year : req.body.year
   }
 
