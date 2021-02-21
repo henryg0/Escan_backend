@@ -2,18 +2,17 @@ const router = require('express').Router();
 let Student = require('../models/Students.models')
 
 router.route('/').get((req, res) => {
-  res.status(200).send("hello world");
-  /*
   Student.find()
     .then(student => res.json(student))
-    .catch(err => res.status(400).send(err))
-  */
+    .catch(err => res.status(400).json('err: ' + err))
 })
 
 router.route('/create').post((req, res) => {
   query = {
     name : req.body.name,
     address : req.body.address,
+    city : req.body.city,
+    state : req.body.state,
     email : req.body.email,
     enteredRaffle : req.body.enteredRaffle,
     major : req.body.major,
